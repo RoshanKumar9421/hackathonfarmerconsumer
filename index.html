@@ -1,0 +1,36 @@
+<form id="registration-form">
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" name="mobile" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="role">Role:</label>
+    <select id="role" name="role" required>
+        <option value="farmer">Farmer</option>
+        <option value="consumer">Consumer</option>
+    </select>
+    
+    <button type="submit">Register</button>
+</form>
+
+<script>
+    document.getElementById('registration-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const mobile = document.getElementById('mobile').value;
+        const password = document.getElementById('password').value;
+        const role = document.getElementById('role').value;
+        
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ mobile_number: mobile, password, role })
+        });
+        
+        const result = await response.json();
+        alert(result.message);
+    });
+</script>

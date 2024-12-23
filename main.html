@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link rel="stylesheet" href="index.html">
+    
+    <link rel="stylesheet" href="LOGINfn.html">
+</head>
+<body>
+<header>
+    <div class="navigation">
+        <input type="checkbox" id="check">
+        <label for="check" class="check_btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">KISAN SATHI</label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Service</a></li>
+            <li><button class="btnlogin-popup" onclick="showLoginOptions()">Login</button></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Login Options Modal -->
+<div id="login-options" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginOptions()">&times;</span>
+        <h2>Login As</h2>
+        <button class="btn" onclick="redirectToFarmerLogin()"> <a href="LOGINfn.html"> Farmer</a> </button>
+        <button class="btn" onclick="redirectToConsumerLogin()"> <a href="LOGINfn.html"> Consumer</a></button>
+    </div>
+</div>
+
+<div class="footer">
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kisan Sathi, all rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+<script src="login.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+</html>
